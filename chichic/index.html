@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>內衣尺寸計算 - THE PERFECT FIT CALCULATOR</title>
     
-    <!-- 💡 這裡：自動引入剛剛獨立出去的 CSS 樣式表 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <!-- 標題區塊 -->
     <div class="header">
         <h1>內衣尺寸計算</h1>
         <div class="notice">
@@ -42,7 +40,7 @@
         <div class="option-card" onclick="selectOption('shape', this)">
             <input type="radio" name="breast-shape" value="soft" checked>
             <div class="option-media">
-                <!-- 讀取上胸無肉圖片 -->
+                <!-- 上胸無肉圖片 -->
                 <img src="image/breast_shape_soft.png" alt="上胸無肉">
             </div>
             <div class="option-info">
@@ -52,7 +50,7 @@
         <div class="option-card" onclick="selectOption('shape', this)">
             <input type="radio" name="breast-shape" value="plump">
             <div class="option-media">
-                <!-- 讀取上胸有肉圖片 -->
+                <!-- 上胸有肉圖片 -->
                 <img src="image/breast_shape_plump.png" alt="上胸有肉">
             </div>
             <div class="option-info">
@@ -62,7 +60,7 @@
     </div>
 </div>
 
-<!-- Step 3 替換為圖片版本 -->
+<!-- Step 3 -->
 <div class="step-container">
     <div class="step-title">Step3 選擇襯墊厚度</div>
     <div class="options-grid">
@@ -106,7 +104,7 @@
 
 </div>
 
-<!-- 彈出結果視窗 Modal -->
+<!-- 彈出結果視窗 -->
 <div class="modal-overlay" id="result-modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -117,7 +115,6 @@
     </div>
 </div>
 
-<!-- 這裡：自動引入剛剛獨立出去的 JS 計算邏輯 -->
 <script src="script.js"></script>
 
 </body>
