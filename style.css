@@ -1,0 +1,350 @@
+
+:root {
+    --primary-color: #8c6239;
+    --primary-hover: #815a33;
+    --gray-text: #666;
+    --light-gray: #f8f8f8;
+    --border-color: #ccc;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 1.2 主頁面寬度容器 */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* 1.3 頂部標題與說明文字 */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+.header .subtitle {
+    font-size: 30px;
+    font-style:inherit;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.header .notice {
+    font-size: 13px;
+    color: var(--gray-text);
+    max-width: 750px;
+    margin: 0 auto 10px auto;
+    text-align: left;
+    word-break: break-all;
+}
+
+.header .highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.header .cs-link {
+    color: #4a90e2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.header .tutorial-link {
+    font-size: 13px;
+    color: var(--gray-text);
+    text-align: left;
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .tutorial-link .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.header .tutorial-link a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* 2.1 步驟區塊基本標題 */
+.step-container {
+    margin-bottom: 35px;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+
+.form-bg {
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+}
+
+
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.option-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 8px; 
+    padding: 10px 15px; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+    position: relative;
+    max-width: 280px;  
+    width: 100%;
+}
+
+.option-card:hover {
+    border-color: var(--border-color);
+}
+
+
+.option-card.selected {
+    border-color: var(--primary-color);
+    background-color: #fffefb;
+    box-shadow: 0 2px 8px rgba(230, 31, 98, 0.08);
+}
+
+
+.option-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option-media {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    overflow: hidden; 
+}
+
+.option-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.option-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+
+/* 3.1 計算與重算按鈕群組 */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* 計算按鈕：桃粉色 */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 清除重算按鈕：灰色 */
+.btn-secondary {
+    background-color: #9b9b9b;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #828282;
+}
+
+/* 3.2 底部貼心提醒 */
+.footer-tips {
+    font-size: 12px;
+    color: var(--gray-text);
+    line-height: 1.8;
+}
+
+/* 3.3 彈出尺寸結果視窗背景遮罩 (Modal Overlay) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 當視窗被觸發啟用時 */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3.4 彈出視窗白底卡片本體 */
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+/* 視窗彈出時的由上往下平滑動畫 */
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* 右上角關閉按鈕 [X] */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+/* 3.5 彈出視窗內部的文字與大尺寸數字 */
+.result-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.result-size {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.result-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
