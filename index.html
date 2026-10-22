@@ -13,6 +13,9 @@
 <div class="container">
     <!-- 標題區塊 -->
     <div class="header">
+            <div class="logo-container">
+        <img src="image/clogo.png" alt="CHIC CHIC 琪琪 Logo" class="site-logo">
+    </div>
         <h1>內衣尺寸計算</h1>
         <div class="notice">
             輸入您的身形數據，跟著步驟選擇胸型與穿著習慣，讓 CHIC CHIC 琪琪幫您找到適合的內衣尺寸。<span class="highlight">測量時建議穿著無襯墊內衣，並將數值填寫至小數點第一位，讓尺寸建議更加準確。</span>
@@ -117,7 +120,25 @@
     </div>
 </div>
 
-<!-- 這裡：自動引入剛剛獨立出去的 JS 計算邏輯 -->
+<!--  新增：首頁自動彈出廣告視窗 -->
+<div class="welcome-modal-overlay" id="welcome-modal">
+    <div class="welcome-modal-content">
+        <button class="welcome-modal-close" onclick="closeWelcomeModal()">&times;</button>
+        <div class="welcome-modal-link-zone">
+            <div class="welcome-text-group">
+                <p class="welcome-subtitle">30秒，測出你的內衣尺寸</p>
+                <p class="welcome-bonus">免費尺寸計算 │ 新朋友享 $50 購物金</p>
+                <a href="https://www.chicchic.com.tw/" class="welcome-action-btn" onclick="closeWelcomeModal()">
+                    立即選購 &rarr;
+                </a>
+                
+                <p class="welcome-hint">快速找到適合你的尺寸</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script src="script.js"></script>
 
 </body>
