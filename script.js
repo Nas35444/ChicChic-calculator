@@ -132,4 +132,29 @@ document.getElementById('result-modal').addEventListener('click', function(e) {
     }
 });
 
+// 💡 當網頁 HTML 結構載入完成後，自動跳出廣告視窗
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeModal = document.getElementById('welcome-modal');
+    if (welcomeModal) {
+        // 延遲 500 毫秒（0.5秒）彈出，感官體驗會更平滑流暢
+        setTimeout(() => {
+            welcomeModal.classList.add('show');
+        }, 500);
+    }
+});
+
+// 💡 關閉廣告視窗的函式
+function closeWelcomeModal() {
+    const welcomeModal = document.getElementById('welcome-modal');
+    if (welcomeModal) {
+        welcomeModal.classList.remove('show');
+    }
+}
+
+// 💡 點擊視窗外面黑底遮罩區也能關閉
+document.getElementById('welcome-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeWelcomeModal();
+    }
+});
 
